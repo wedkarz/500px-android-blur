@@ -43,17 +43,17 @@ public class MainActivity extends AppCompatActivity {
     public void shuffle(View view) {
 
         // Randomly pick a different start in the array of available images.
-        int newStartIndex;
-        do {
-            newStartIndex = IMAGE_IDS[mRandom.nextInt(IMAGE_IDS.length)];
-        } while (newStartIndex == mStartIndex);
-        mStartIndex = newStartIndex;
-
-        // Update the images for the image views contained in the blurred view.
-        for (int i = 0; i < mImageViews.length; i++) {
-            int drawableId = IMAGE_IDS[(mStartIndex + i) % IMAGE_IDS.length];
-            mImageViews[i].setImageDrawable(getResources().getDrawable(drawableId));
-        }
+//        int newStartIndex;
+//        do {
+//            newStartIndex = IMAGE_IDS[mRandom.nextInt(IMAGE_IDS.length)];
+//        } while (newStartIndex == mStartIndex);
+//        mStartIndex = newStartIndex;
+//
+//        // Update the images for the image views contained in the blurred view.
+//        for (int i = 0; i < mImageViews.length; i++) {
+//            int drawableId = IMAGE_IDS[(mStartIndex + i) % IMAGE_IDS.length];
+//            mImageViews[i].setImageDrawable(getResources().getDrawable(drawableId));
+//        }
 
         // Invalidates the blurring view when the content of the blurred view changes.
         mBlurringView.invalidate();
