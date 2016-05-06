@@ -29,15 +29,15 @@ public class MainActivity extends AppCompatActivity {
         // Give the blurring view a reference to the blurred view.
         mBlurringView.setBlurredView(blurredView);
 
-        mImageViews[0] = (ImageView) findViewById(R.id.image0);
-        mImageViews[1] = (ImageView) findViewById(R.id.image1);
-        mImageViews[2] = (ImageView) findViewById(R.id.image2);
-        mImageViews[3] = (ImageView) findViewById(R.id.image3);
-        mImageViews[4] = (ImageView) findViewById(R.id.image4);
-        mImageViews[5] = (ImageView) findViewById(R.id.image5);
-        mImageViews[6] = (ImageView) findViewById(R.id.image6);
-        mImageViews[7] = (ImageView) findViewById(R.id.image7);
-        mImageViews[8] = (ImageView) findViewById(R.id.image8);
+//        mImageViews[0] = (ImageView) findViewById(R.id.image0);
+//        mImageViews[1] = (ImageView) findViewById(R.id.image1);
+//        mImageViews[2] = (ImageView) findViewById(R.id.image2);
+//        mImageViews[3] = (ImageView) findViewById(R.id.image3);
+//        mImageViews[4] = (ImageView) findViewById(R.id.image4);
+//        mImageViews[5] = (ImageView) findViewById(R.id.image5);
+//        mImageViews[6] = (ImageView) findViewById(R.id.image6);
+//        mImageViews[7] = (ImageView) findViewById(R.id.image7);
+//        mImageViews[8] = (ImageView) findViewById(R.id.image8);
     }
 
     public void shuffle(View view) {

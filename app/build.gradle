@@ -2,7 +2,7 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 23
-    buildToolsVersion "23.0.2"
+    buildToolsVersion "23.0.3"
 
     defaultConfig {
         applicationId "com.fivehundredpx.blurringviewsample"
@@ -19,11 +19,25 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+    // NOTE (AR): ArcGIS is conflicting these files, consider reading: https://developers.arcgis.com/android/guide/develop-your-first-map-app.htm
+    // before deleting these lines.
+    packagingOptions {
+        exclude 'META-INF/services/javax.annotation.processing.Processor'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/NOTICE'
+        pickFirst 'META-INF/LGPL2.1'
+    }
+}
+
+repositories {
+    maven { url 'http://esri.bintray.com/arcgis' }
 }
 
 dependencies {
     compile project(':blurringview')
     compile fileTree(include: ['*.jar'], dir: 'libs')
-    compile 'com.android.support:appcompat-v7:23.1.1'
-    compile 'com.android.support:support-v4:23.1.1'
+    compile 'com.android.support:appcompat-v7:23.3.0'
+    compile 'com.android.support:support-v4:23.3.0'
+    compile 'com.esri.arcgis.android:arcgis-android:10.2.7'
 }
